@@ -1,6 +1,9 @@
+/* eslint-disable */
 'use strict'
 
-const ccxt = require('ccxt')(async function () {
+const ccxt = require('ccxt');
+
+(async function () {
   let kraken = new ccxt.kraken()
   let bitfinex = new ccxt.bitfinex({ verbose: true })
   let huobi = new ccxt.huobi()

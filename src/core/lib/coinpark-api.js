@@ -3,15 +3,7 @@
 let CryptoJS = require("crypto-js");
 let request = require("request");
 
-class Coinpark{
-  constructor(obj) {
-    this.config = obj;
-  }
-  getconfig() {
-    return this.config;
-  }
-  
-let doPost (url, params, callBack) {
+let doPost = function (url, params, callBack) {
     request.post({url: url, form: params}, function (error, response, body) {
         if (!error && response && response.statusCode===200) {
             let result = JSON.parse(body);
@@ -34,7 +26,7 @@ let doGet = function (url, callBack) {
         }
     });
 };
- 
+
 let getSign = function (data) {
     var secret = 'your apikey secret';
     var sign = CryptoJS.HmacMD5(JSON.stringify(data), secret).toString();
@@ -276,6 +268,4 @@ let getUserAssets = function () {
         console.log('%s: return：', _func_name_, JSON.stringify(res));
     });
 };
-}
 
-module.exports = Coinpark;
