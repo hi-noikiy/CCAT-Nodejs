@@ -1,0 +1,54 @@
+{
+  "name": "CCAT-Core",
+  "version": "0.0.0",
+  "description": "OpenInfoGraphic implemetation of Crypto Currency Arbitrage Trading Core",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "",
+    "lint": "aegir lint",
+    "test": "aegir test --target node",
+    "build": "aegir build",
+    "docs": "aegir docs",
+    "release": "aegir release --target node --docs",
+    "release-minor": "aegir release --type minor --target node --docs",
+    "release-major": "aegir release --type major --target node --docs",
+    "coverage": "aegir coverage",
+    "coverage-publish": "aegir coverage --upload",
+    "package": ""
+  },
+  "pre-push": [
+    "lint",
+    "test"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OpenInfoGraphic/CCAT-Core.git"
+  },
+  "keywords": [
+    "ccxt",
+    "fcoin",
+    "coinpark",
+    "CCAT-Core"
+  ],
+  "devDependencies": {
+    "aegir": "^14.0.0",
+    "chai": "^4.1.2",
+    "dirty-chai": "^2.0.1",
+    "pre-push": "~0.1.1"
+  },
+  "dependencies": {
+    "ccxt": "^1.14.256"
+  },
+  "author": {
+    "name": "Paul Zhang",
+    "email": "paulplayergg@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/OpenInfoGraphic/CCAT-Core/issues"
+  },
+  "homepage": "https://github.com/OpenInfoGraphic/CCAT-Core#readme",
+  "contributors": [
+    "paulplayer <paulplayergg@gmail.com>"
+  ]
+}
