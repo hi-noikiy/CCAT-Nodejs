@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const qs = require('qs')
 const md5 = require('crypto-js/md5')
 const axios = require('axios')
@@ -19,7 +21,7 @@ instance.interceptors.request.use(function (config) {
 })
 
 class CoinBig {
-  constructor (apiKey = '', secret = '') {
+  constructor(apiKey = '', secret = '') {
     this.apiKey = apiKey
     this.secret = secret
     this.url = 'https://www.coinbig.com'
@@ -30,7 +32,7 @@ class CoinBig {
    * @param  {[type]} param [description]
    * @return {[type]}       [description]
    */
-  sign (param) {
+  sign(param) {
     let keys = Object.keys(param)
     keys.sort()
     let temp = {}
@@ -48,8 +50,10 @@ class CoinBig {
    * 获取用户信息
    * @return {[type]} [description]
    */
-  userinfo () {
-    let params = { apikey: this.apiKey }
+  userinfo() {
+    let params = {
+      apikey: this.apiKey
+    }
     let fromData = this.sign(params)
     return instance.post('/api/publics/v1/userinfo', fromData).then(res => res.data)
   }
@@ -58,70 +62,105 @@ class CoinBig {
    * 获取交易信息
    * @type {CoinBig}
    */
-  trades_info (symbol, since = 60) {
-    let params = { symbol, since, apikey: this.apiKey }
+  trades_info(symbol, since = 60) {
+    let params = {
+      symbol,
+      since,
+      apikey: this.apiKey
+    }
     let fromData = this.sign(params)
     return instance.post('/api/publics/v1/trades', fromData).then(res => res.data)
   }
 
-   /**
-    * 获取所有订单信息
-    * @type {CoinBig}
-    */
-  orders_info (symbol, trade_type, size = 50) {
-    let params = { symbol, trade_type, size, apikey: this.apiKey }
+  /**
+   * 获取所有订单信息
+   * @type {CoinBig}
+   */
+  orders_info(symbol, trade_type, size = 50) {
+    let params = {
+      symbol,
+      trade_type,
+      size,
+      apikey: this.apiKey
+    }
     let fromData = this.sign(params)
     return instance.post('/api/publics/v1/orders_info', fromData).then(res => res.data)
   }
 
-    /**
-    * 撤销订单
-    * @type {CoinBig}
-    */
-  cancel_order (order_id) {
-    let params = { order_id, apikey: this.apiKey }
+  /**
+   * 撤销订单
+   * @type {CoinBig}
+   */
+  cancel_order(order_id) {
+    let params = {
+      order_id,
+      apikey: this.apiKey
+    }
     let fromData = this.sign(params)
     return instance.post('/api/publics/v1/cancel_order', fromData).then(res => res.data)
   }
 
-    /**
-    * 获取用户资产(币种)
-    * @type {CoinBig}
-    */
-  userinfo_by_symbol (symbol, shortName = 'btc') {
-    let params = { symbol, shortName, apikey: this.apiKey }
+  /**
+   * 获取用户资产(币种)
+   * @type {CoinBig}
+   */
+  userinfo_by_symbol(symbol, shortName = 'btc') {
+    let params = {
+      symbol,
+      shortName,
+      apikey: this.apiKey
+    }
     let fromData = this.sign(params)
     return instance.post('/api/publics/v1/userinfoBySymbol', fromData).then(res => res.data)
   }
 
-    /**
-    *  获取所有的币对符号
-    * @type {CoinBig}
-    */
-  symbols () {
+  /**
+   *  获取所有的币对符号
+   * @type {CoinBig}
+   */
+  symbols() {
     return instance.get('/api/publics/v1/symbols').then(res => res.data)
   }
 
-    /**
-    *  下单交易(单个挂单)
-    * @type {CoinBig}
-    */
-  trade (symbol, type, price, amount) {
-    let params = { symbol, type, price, amount, apikey: this.apiKey }
+  /**
+   *  下单交易(单个挂单)
+   * @type {CoinBig}
+   */
+  trade(symbol, type, price, amount) {
+    let params = {
+      symbol,
+      type,
+      price,
+      amount,
+      apikey: this.apiKey
+    }
     let fromData = this.sign(params)
     return instance.post('/api/publics/v1/trade', fromData).then(res => res.data)
   }
 
-    /**
-    *  获取深度图
-    * @type {CoinBig}
-    */
-  depth (symbol, size = 100) {
-    let params = { symbol, size }
+  /**
+   *  获取深度图
+   * @type {CoinBig}
+   */
+  depth(symbol, size = 100) {
+    let params = {
+      symbol,
+      size
+    }
     let fromData = this.sign(params)
     return instance.get(`/api/publics/v1/depth?${qs.stringify(params)}`).then(res => res.data)
   }
-
+  /**
+   *  获取行情
+   * @type {CoinBig}
+   */
+  ticker(symbol) {
+    let params = {
+      symbol      
+    }
+    let fromData = this.sign(params)
+    return instance.get(`/api/publics/v1/ticker?${qs.stringify(params)}`).then(res => res.data)
+  }
 }
 
 module.exports = CoinBig

@@ -40,7 +40,11 @@
     "pre-push": "~0.1.1"
   },
   "dependencies": {
-    "ccxt": "^1.14.256"
+    "ccxt": "^1.15.19",
+    "getmac": "^1.4.3",
+    "re-require-module": "^1.0.2",
+    "mathjs": "^5.0.0",
+    "axios": "~0.18.0"
   },
   "author": {
     "name": "Paul Zhang",

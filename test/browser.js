@@ -1,7 +1,13 @@
 /* eslint-env mocha */
 'use strict'
 
+const chai = require('chai')
+const dirtyChai = require('dirty-chai')
+const expect = chai.expect
+chai.use(dirtyChai)
+
 describe('browser.js', () => {
-  require('./specs/fcoin.spec.js')
-  require('./specs/coinpark.spec.js')
+  it('browser', () => {
+    expect('browser').to.equal('browser')
+  })
 })
