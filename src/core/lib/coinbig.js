@@ -56,12 +56,12 @@ class Coinbig {
 
   cancelOrderByID (id) {
     debug('createOrder is called')
-    return this.coinbigAPI.cancel_order(id).then(res => res.code === 0 ? res.data : false)
+    return this.coinbigAPI.cancel_order(id).then(res => res.code === 0 ? res.data : res.msg)
   }
 
   getOrders (symbol, states, limit, after, before) {
     debug('createOrder is called')
-    return this.coinbigAPI.orders_info(symbol, states, limit, after, before)
+    return this.coinbigAPI.orders_info(symbol, trade_type, size)
   }
 
   getOrderByID (id) {
