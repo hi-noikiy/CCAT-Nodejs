@@ -61,27 +61,27 @@ class Coin {
   }
 
   cancelOrderByID (id) {
-    debug('createOrder is called')
+    debug('cancelOrderByID is called')
     return this.xc.cancelOrderByID(id)
   }
 
-  getOrders (symbol, states, limit, after, before) {
-    debug('createOrder is called')
-    return this.xc.getOrders(symbol, states, limit, after, before)
+  getOrders (symbol, type, size) {
+    debug('getOrders is called')
+    return this.xc.getOrders(symbol, type, size)
   }
 
   getOrderByID (id) {
-    debug('createOrder is called')
+    debug('getOrderByID is called')
     return this.xc.getOrderByID(id)
   }
 
   getBalance () {
-    debug('createOrder is called')
+    debug('getBalance is called')
     return this.xc.getBalance()
   }
 
   getBalanceByCurrency (currency) {
-    debug('createOrder is called')
+    debug('getBalanceByCurrency is called')
     return this.xc.getBalanceByCurrency(currency)
   }
 }

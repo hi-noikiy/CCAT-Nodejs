@@ -1,5 +1,7 @@
 /* eslint-disable */
 
+// api-doc https://github.com/489405826/coinbigapi/wiki/API-Document
+
 const qs = require('qs')
 const md5 = require('crypto-js/md5')
 const axios = require('axios')
@@ -47,7 +49,7 @@ class CoinBig {
   }
 
   /**
-   * 获取用户信息
+   * 获取用户资产信息
    * @return {[type]} [description]
    */
   userinfo() {
@@ -76,10 +78,10 @@ class CoinBig {
    * 获取所有订单信息
    * @type {CoinBig}
    */
-  orders_info(symbol, trade_type, size = 50) {
+  orders_info(symbol, type, size = 50) {
     let params = {
       symbol,
-      trade_type,
+      type,
       size,
       apikey: this.apiKey
     }
@@ -104,9 +106,8 @@ class CoinBig {
    * 获取用户资产(币种)
    * @type {CoinBig}
    */
-  userinfo_by_symbol(symbol, shortName = 'btc') {
+  userinfo_by_symbol(shortName = 'btc') {
     let params = {
-      symbol,
       shortName,
       apikey: this.apiKey
     }

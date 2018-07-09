@@ -28,4 +28,20 @@ const xCoin = new Coinbig(config);
   await debug('createOrder:')
   let order = await xCoin.createOrder('ETH_USDT', 'buy', 'limit', 0.01, 100)
   await debug(order)
+
+  await debug('cancelOrderByID')
+  let cancelID = await xCoin.cancelOrderByID('1')
+  await debug(cancelID)
+
+  await debug('getOrders')
+  let orders = await xCoin.getOrders('ETH_USDT', 1, 50)
+  await debug(orders)
+
+  await debug('getBalance')
+  let balance = await xCoin.getBalance()
+  await debug(balance)
+
+  await debug('getBalanceByCurrency')
+  let balanceCoin = await xCoin.getBalanceByCurrency('btc')
+  await debug(balanceCoin)
 })()

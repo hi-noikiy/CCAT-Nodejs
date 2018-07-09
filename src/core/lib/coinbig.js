@@ -40,9 +40,9 @@ class Coinbig {
     debug('createOrder is called')
     let xtype
     if (side === 'buy') {
-      xtype = side === 'market' ? 'buy_market' : 'buy'
+      xtype = type === 'market' ? 'buy_market' : 'buy'
     } else if (side === 'sell') {
-      xtype = side === 'market' ? 'sell_market' : 'sell'
+      xtype = type === 'market' ? 'sell_market' : 'sell'
     } else {
       return false
     }
@@ -55,28 +55,28 @@ class Coinbig {
   }
 
   cancelOrderByID (id) {
-    debug('createOrder is called')
+    debug('cancelOrderByID is called')
     return this.coinbigAPI.cancel_order(id).then(res => res.code === 0 ? res.data : res.msg)
   }
 
-  getOrders (symbol, states, limit, after, before) {
-    debug('createOrder is called')
-    return this.coinbigAPI.orders_info(symbol, trade_type, size)
+  getOrders (symbol, type, size) {
+    debug('getOrders is called')
+    return this.coinbigAPI.orders_info(symbol, type, size).then(res => res.code === 0 ? res.data : res.msg)
   }
 
   getOrderByID (id) {
-    debug('createOrder is called')
-    return this.xc.getOrderByID(id)
+    debug('getOrderByID is called')
+    return false // to be continue
   }
 
   getBalance () {
-    debug('createOrder is called')
-    return this.xc.getBalance()
+    debug('getBalance is called')
+    return this.coinbigAPI.userinfo().then(res => res.code === 0 ? res.data : res.msg)
   }
 
   getBalanceByCurrency (currency) {
-    debug('createOrder is called')
-    return this.xc.getBalanceByCurrency(currency)
+    debug('getBalanceByCurrency is called')
+    return this.coinbigAPI.userinfo_by_symbol(currency).then(res => res.code === 0 ? res.data : res.msg)
   }
 }
 
