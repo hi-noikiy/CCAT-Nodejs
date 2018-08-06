@@ -10,7 +10,7 @@
 ![Nodejs](https://img.shields.io/badge/Node.js-%3E%3D8.11.0-orange.svg?style=plastic)
 ![npm](https://img.shields.io/badge/npm-%3E%3D6.0.0-orange.svg?style=plastic)
 
-> OpenInfoGraphic implemetation of Crypto Currency Arbitrage Trading
+> Crypto Currency Arbitrage Trading Core by OpenInfoGraphic
 [CCAT-Core](https://github.com/OpenInfoGraphic/CCAT-Core) specification
 
 > 维护者:
