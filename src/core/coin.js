@@ -1,16 +1,56 @@
 'use strict'
 
 const debug = require('debug')('core:coin')
-const path = require('path')
-const Fcoin = require(path.join(__dirname, 'lib/fcoin.js'))
-const Coinpark = require(path.join(__dirname, 'lib/coinpark.js'))
-const Coinbig = require(path.join(__dirname, 'lib/fcoin.js'))
+const Okex = require('./lib/okex.js')
+const Binance = require('./lib/binance.js')
+const Huobi = require('./lib/huobi.js')
+const Hitbtc = require('./lib/hitbtc.js')
+const Bitfinex = require('./lib/bitfinex.js')
+const Zb = require('./lib/zb.js')
+const Lbank = require('./lib/lbank.js')
+const Quolinex = require('./lib/quolinex.js')
+const Bibox = require('./lib/bibox.js')
+const Coinex = require('./lib/coinex.js')
+const Fcoin = require('./lib/fcoin.js')
+const Coinpark = require('./lib/coinpark.js')
+const Coinbig = require('./lib/fcoin.js')
 
 class Coin {
   constructor (config) {
     debug('constructor is called')
+    debug('config.name is: ' + config.name)
     this.config = config
     switch (config.name) {
+      case 'okex':
+        this.xc = new Okex(config)
+        break
+      case 'binance':
+        this.xc = new Binance(config)
+        break
+      case 'Huobi':
+        this.xc = new Huobi(config)
+        break
+      case 'hitbtc':
+        this.xc = new Hitbtc(config)
+        break
+      case 'bitfinex':
+        this.xc = new Bitfinex(config)
+        break
+      case 'zb':
+        this.xc = new Zb(config)
+        break
+      case 'lbank':
+        this.xc = new Lbank(config)
+        break
+      case 'quolinex':
+        this.xc = new Quolinex(config)
+        break
+      case 'bibox':
+        this.xc = new Bibox(config)
+        break
+      case 'coinex':
+        this.xc = new Coinex(config)
+        break
       case 'fcoin':
         this.xc = new Fcoin(config)
         break
@@ -21,8 +61,9 @@ class Coin {
         this.xc = new Coinbig(config)
         break
       default:
-        throw new Error('core:coin.js: config.name not defined')
+        throw new Error('core:coin.js, config.name (' + config.name + ') not defined')
     }
+    debug('constructor is called')
   }
 
   getConfig () {

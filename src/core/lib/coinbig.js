@@ -1,8 +1,7 @@
 'use strict'
 
 const debug = require('debug')('core:lib:coinbig')
-const path = require('path')
-const CoinbigAPI = require(path.join(__dirname, './coinbig-api'))
+const CoinbigAPI = require('./coinbig-api')
 
 class Coinbig {
   constructor (config) {
