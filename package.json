@@ -1,15 +1,14 @@
 {
   "name": "CCAT-Core",
   "version": "0.0.0",
-  "description": "OpenInfoGraphic implemetation of Crypto Currency Arbitrage Trading Core",
+  "description": "Crypto Currency Arbitrage Trading Core by OpenInfoGraphic",
   "main": "src/index.js",
   "scripts": {
     "start": "",
     "lint": "aegir lint",
-    "test": "aegir test",
+    "test": "aegir test  --target node --target browser",
     "test:node": "aegir test --target node",
     "test:browser": "aegir test --target browser",
-    "test:webworker": "aegir test --target webworker",
     "build": "aegir build",
     "docs": "aegir docs",
     "release": "aegir release --docs",
@@ -29,9 +28,8 @@
   },
   "keywords": [
     "ccxt",
-    "fcoin",
-    "coinpark",
-    "CCAT-Core"
+    "CCAT-Core",
+    "CryptoCurrency Arbitrage"
   ],
   "devDependencies": {
     "aegir": "^14.0.0",
@@ -41,10 +39,7 @@
   },
   "dependencies": {
     "ccxt": "^1.15.19",
-    "getmac": "^1.4.3",
-    "re-require-module": "^1.0.2",
-    "mathjs": "^5.0.0",
-    "axios": "~0.18.0"
+    "mathjs": "^5.0.0"
   },
   "author": {
     "name": "Paul Zhang",
