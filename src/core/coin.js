@@ -10,10 +10,13 @@ const Zb = require('./lib/zb.js')
 const Lbank = require('./lib/lbank.js')
 const Quolinex = require('./lib/quolinex.js')
 const Bibox = require('./lib/bibox.js')
+const Gate = require('./lib/gate.js')
 const Fcoin = require('./lib/fcoin.js')
 const Coinex = require('./lib/coinex.js')
 const Coinpark = require('./lib/coinpark.js')
 const Coinbig = require('./lib/fcoin.js')
+
+debug('src/core/coin.js is called')
 
 class Coin {
   constructor (config) {
@@ -47,6 +50,9 @@ class Coin {
         break
       case 'bibox':
         this.xc = new Bibox(config)
+        break
+      case 'gate':
+        this.xc = new Gate(config)
         break
       case 'fcoin':
         this.xc = new Fcoin(config)

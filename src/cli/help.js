@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 'use strict'
 
 const colors = require('colors/safe')
@@ -18,7 +19,7 @@ Enjoy your CCAT-Core!
 `
 
 function printHelp () {
-  console.log(colors.yellow(helpStr))
+  console.log(colors.green(helpStr))
   readlineSync.question('Press ENTER key to continue...\n')
 }
 

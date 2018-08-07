@@ -6,8 +6,8 @@ const path = require('path')
 const configFile = path.resolve(process.cwd(), './config.json')
 const config = JSON.parse(fs.readFileSync(configFile))
 
-debug('config.js is called')
-debug('config file parse result: \n')
+debug('src/core/config.js is called')
+debug('config file parse result:')
 debug(config)
 
 module.exports = {
@@ -60,6 +60,11 @@ module.exports = {
     name: config.coinex.name,
     key: config.coinex.key,
     secret: config.coinex.secret
+  },
+  gate: {
+    name: config.gate.name,
+    key: config.gate.key,
+    secret: config.gate.secret
   },
   fcoin: {
     name: config.fcoin.name,

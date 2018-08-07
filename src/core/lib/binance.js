@@ -1,13 +1,13 @@
 'use strict'
 
-const debug = require('debug')('core:lib:fcoin')
+const debug = require('debug')('core:lib:binance')
 const ccxt = require('ccxt')
 
-class fcoin {
+class binance {
   constructor (config) {
     debug('constructor is called')
     this.config = config
-    this.fcoinAPI = new ccxt.fcoin({ // eslint-disable-line
+    this.binanceAPI = new ccxt.binance({ // eslint-disable-line
       apiKey: config.key,
       secret: config.secret
     })
@@ -19,4 +19,4 @@ class fcoin {
   }
 }
 
-module.exports = fcoin
+module.exports = binance
