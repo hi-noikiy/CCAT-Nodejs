@@ -7,8 +7,8 @@ const dirtyChai = require('dirty-chai')
 const expect = chai.expect
 chai.use(dirtyChai)
 
-describe('coinbig.spec.js', () => {
-  it('coinbig', () => {
-    expect('coinbig').to.equal('coinbig')
+describe('gate.spec.js', () => {
+  it('gate', () => {
+    expect('gate').to.equal('gate')
   })
 })

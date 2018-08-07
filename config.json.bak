@@ -44,6 +44,11 @@
     "key": "",
     "secret": ""
   },
+  "gate": {
+    "name": "gate",
+    "key": "",
+    "secret": ""
+  },
   "fcoin": {
     "name": "fcoin",
     "key": "",

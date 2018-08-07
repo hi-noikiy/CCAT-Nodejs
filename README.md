@@ -5,7 +5,7 @@
 ![npm](https://img.shields.io/badge/Status-Devloping-blue.svg?style=plastic)
 ![npm](https://img.shields.io/badge/Made%20by-OpenInfoGraphic-blue.svg?style=plastic)
 
-[![Build Status](http://45.76.208.48:8080/buildStatus/icon?job=CCAT-Core&style=plastic)](http://45.76.208.48:8080/job/CCAT-Core/)
+[![Build Status](http://45.76.208.48:8080/buildStatus/icon?job=CCAT-Core&style=plastic)](http://45.76.208.48:8080/job/CCAT-Core)
 [![codecov](https://codecov.io/gh/OpenInfoGraphic/CCAT-Core/branch/master/graph/badge.svg?style=plastic)](https://codecov.io/gh/OpenInfoGraphic/CCAT-Core)
 ![Nodejs](https://img.shields.io/badge/Node.js-%3E%3D8.11.0-orange.svg?style=plastic)
 ![npm](https://img.shields.io/badge/npm-%3E%3D6.0.0-orange.svg?style=plastic)

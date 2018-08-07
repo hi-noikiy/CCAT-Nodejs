@@ -4,7 +4,10 @@
   "description": "Crypto Currency Arbitrage Trading Core by OpenInfoGraphic",
   "main": "src/index.js",
   "scripts": {
-    "start": "",
+    "start": "node ./src/cli/index.js",
+    "debug": "DEBUG=* node ./src/cli/index.js",
+    "debug:cli": "DEBUG=cli:*,core:* node ./src/cli/index.js",
+    "debug:ui": "DEBUG=ui:*,core:* node ./src/ui/index.js",
     "lint": "aegir lint",
     "test": "aegir test  --target node --target browser",
     "test:node": "aegir test --target node",
@@ -15,8 +18,7 @@
     "release-minor": "aegir release --type minor --docs",
     "release-major": "aegir release --type major --docs",
     "coverage": "aegir coverage",
-    "coverage-publish": "aegir coverage --upload",
-    "package": ""
+    "coverage-publish": "aegir coverage --upload"
   },
   "pre-push": [
     "lint",
@@ -32,14 +34,16 @@
     "CryptoCurrency Arbitrage"
   ],
   "devDependencies": {
-    "aegir": "^14.0.0",
+    "aegir": "^15.1.0",
     "chai": "^4.1.2",
     "dirty-chai": "^2.0.1",
     "pre-push": "~0.1.1"
   },
   "dependencies": {
     "ccxt": "^1.15.19",
-    "mathjs": "^5.0.0"
+    "mathjs": "^5.0.0",
+    "colors": "^1.3.0",
+    "readline-sync": "^1.4.9"
   },
   "author": {
     "name": "Paul Zhang",
