@@ -26,10 +26,6 @@ async function log (logStr, logFile = logFileStr) {
   return true
 }
 
-/**
- * 读取路径信息
- * @param {string} path 路径
- */
 function getStat (path) {
   return new Promise((resolve, reject) => {
     fs.stat(path, (err, stats) => {
@@ -42,10 +38,6 @@ function getStat (path) {
   })
 }
 
-/**
- * 创建路径
- * @param {string} dir 路径
- */
 function mkdir (dir) {
   return new Promise((resolve, reject) => {
     fs.mkdir(dir, err => {
@@ -58,10 +50,6 @@ function mkdir (dir) {
   })
 }
 
-/**
- * 路径是否存在，不存在则创建
- * @param {string} dir 路径
- */
 async function dirExists (dir) {
   let isExists = await getStat(dir)
   // 如果该路径且不是文件，返回true
