@@ -16,8 +16,7 @@
     "release-minor": "aegir release --type minor --docs",
     "release-major": "aegir release --type major --docs",
     "coverage": "aegir coverage",
-    "coverage-publish": "aegir coverage --upload",
-    "package": ""
+    "coverage-publish": "aegir coverage --upload"
   },
   "pre-push": [
     "lint",

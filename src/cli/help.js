@@ -19,7 +19,7 @@ Enjoy your CCAT-Core!
 
 function printHelp () {
   console.log(colors.yellow(helpStr))
-  readlineSync.question('Press any key to continue...\n')
+  readlineSync.question('Press ENTER key to continue...\n')
 }
 
 module.exports.printHelp = printHelp

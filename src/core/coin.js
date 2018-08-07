@@ -10,8 +10,8 @@ const Zb = require('./lib/zb.js')
 const Lbank = require('./lib/lbank.js')
 const Quolinex = require('./lib/quolinex.js')
 const Bibox = require('./lib/bibox.js')
-const Coinex = require('./lib/coinex.js')
 const Fcoin = require('./lib/fcoin.js')
+const Coinex = require('./lib/coinex.js')
 const Coinpark = require('./lib/coinpark.js')
 const Coinbig = require('./lib/fcoin.js')
 
@@ -48,11 +48,11 @@ class Coin {
       case 'bibox':
         this.xc = new Bibox(config)
         break
-      case 'coinex':
-        this.xc = new Coinex(config)
-        break
       case 'fcoin':
         this.xc = new Fcoin(config)
+        break
+      case 'coinex':
+        this.xc = new Coinex(config)
         break
       case 'coinpark':
         this.xc = new Coinpark(config)
