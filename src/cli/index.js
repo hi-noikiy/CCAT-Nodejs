@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 'use strict'
 
+const debug = require('debug')('cli:index')
 const colors = require('colors/safe')
 const readlineSync = require('readline-sync')
 const usages = [
@@ -27,9 +28,10 @@ const markets = [
   'Coinpark',
   'Coinbig'
 ]
-
 var index
 var subIndex
+
+debug('src/cli/index.js is called')
 
 ;(async () => {
   do {

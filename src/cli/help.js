@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 'use strict'
 
+const debug = require('debug')('cli:help')
 const colors = require('colors/safe')
 const readlineSync = require('readline-sync')
 const helpStr = `
@@ -17,6 +18,7 @@ CCAT-Core is now support numbers of markets, you can using it by typing followin
 
 Enjoy your CCAT-Core!
 `
+debug('src/cli/help.js is called')
 
 function printHelp () {
   console.log(colors.green(helpStr))

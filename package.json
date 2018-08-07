@@ -5,7 +5,9 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node ./src/cli/index.js",
-    "debug": "DEBUG=core:* node ./src/cli/index.js",
+    "debug": "DEBUG=* node ./src/cli/index.js",
+    "debug:cli": "DEBUG=cli:*,core:* node ./src/cli/index.js",
+    "debug:ui": "DEBUG=ui:*,core:* node ./src/ui/index.js",
     "lint": "aegir lint",
     "test": "aegir test  --target node --target browser",
     "test:node": "aegir test --target node",

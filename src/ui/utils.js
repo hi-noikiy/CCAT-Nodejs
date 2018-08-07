@@ -1,11 +1,11 @@
 'use strict'
 
-const debug = require('debug')('cli:utils')
+const debug = require('debug')('ui:utils')
 const fs = require('fs')
 const path = require('path')
 const logFileStr = path.resolve(process.cwd(), './logs/CCAT.Core.' + new Date().toString().replace(/\s+/g, '.') + '.log')
 
-debug('src/cli/utils.js is called')
+debug('src/ui/utils.js is called')
 
 async function log (logStr, logFile = logFileStr) {
   debug('log is called')
