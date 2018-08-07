@@ -2,7 +2,6 @@
 
 module.exports = {
   karma: {
-    browsers: ['ChromeHeadless'],
-    singleRun: true
+    browsers: ['ChromeHeadless']
   }
 }
