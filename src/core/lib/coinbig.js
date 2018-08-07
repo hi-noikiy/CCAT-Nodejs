@@ -3,6 +3,8 @@
 const debug = require('debug')('core:lib:coinbig')
 const CoinbigAPI = require('./coinbig-api')
 
+debug('src/core/lib/coinbig.js is called')
+
 class Coinbig {
   constructor (config) {
     debug('constructor is called')

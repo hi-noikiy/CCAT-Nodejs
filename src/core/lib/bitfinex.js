@@ -3,6 +3,8 @@
 const debug = require('debug')('core:lib:fcoin')
 const ccxt = require('ccxt')
 
+debug('src/core/lib/fcoin.js is called')
+
 class fcoin {
   constructor (config) {
     debug('constructor is called')
