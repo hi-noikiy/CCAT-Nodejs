@@ -19,6 +19,10 @@ class binance {
     debug('getConfig is called')
     return this.config
   }
+
+  getCurrency () {
+    debug('getCurrency is called')
+  }
 }
 
 module.exports = binance
