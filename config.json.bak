@@ -8,6 +8,11 @@
     "name": "binance",
     "key": "",
     "secret": ""
+  },  
+  "bithumb": {
+    "name": "bithumb",
+    "key": "",
+    "secret": ""
   },
   "huobi": {
     "name": "huobi",
