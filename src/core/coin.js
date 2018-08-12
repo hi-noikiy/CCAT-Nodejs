@@ -100,9 +100,9 @@ class Coin {
     return this.xc.getTicker(symbol)
   }
 
-  getDepth (deep, symbol) {
+  getDepth (symbol, deep) {
     debug('getDepth is called')
-    return this.xc.getDepth(deep, symbol)
+    return this.xc.getDepth(symbol, deep)
   }
 
   createOrder (symbol, side, type, price, amount) {

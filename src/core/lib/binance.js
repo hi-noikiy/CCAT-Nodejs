@@ -10,9 +10,10 @@ class binance {
     debug('constructor is called')
     this.config = config
     this.binanceAPI = new ccxt.binance({ // eslint-disable-line
-      apiKey: config.key,
-      secret: config.secret,
-      enableRateLimit: true
+      'apiKey': config.key,
+      'secret': config.secret,
+      'timeout': 30000,
+      'enableRateLimit': true
     })
     debug(this.binanceAPI)
   }
@@ -28,7 +29,7 @@ class binance {
     return this.binanceAPI.markets
   }
 
-  async getSymbols () {
+  getSymbols () {
     debug('getSymbols is called')
     return this.binanceAPI.symbols
   }
@@ -38,9 +39,21 @@ class binance {
     return this.binanceAPI.currencies
   }
 
-  getTicker (symbol) {
+  async getTicker (symbol) {
     debug('getTicker is called')
-    return this.binanceAPI.publicGetTickerPrice(symbol)
+    var res = await this.binanceAPI.fetchTicker(symbol)
+    return res
+  }
+
+  async getDepth (symbol, deep) {
+    debug('getDepth is called')
+    var res = await this.binanceAPI.fetchOrderBook(symbol, deep)
+    return res
+  }
+
+  async createOrder (symbol, side, type, price, amount) {
+    debug('createOrder is called')
+    return this.binanceAPI.createOrder(symbol, side, type, price, amount)
   }
 }
 
