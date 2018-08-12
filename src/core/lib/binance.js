@@ -10,10 +10,10 @@ class binance {
     debug('constructor is called')
     this.config = config
     this.binanceAPI = new ccxt.binance({ // eslint-disable-line
-      'apiKey': config.key,
-      'secret': config.secret,
-      'timeout': 30000,
-      'enableRateLimit': true
+      apiKey: config.key,
+      secret: config.secret,
+      timeout: 30000,
+      enableRateLimit: true
     })
     debug(this.binanceAPI)
   }
