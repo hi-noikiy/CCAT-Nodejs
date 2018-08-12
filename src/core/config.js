@@ -21,6 +21,11 @@ module.exports = {
     key: config.binance.key,
     secret: config.binance.secret
   },
+  bithumb: {
+    name: config.bithumb.name,
+    key: config.bithumb.key,
+    secret: config.bithumb.secret
+  },
   huobi: {
     name: config.huobi.name,
     key: config.huobi.key,

@@ -3,6 +3,7 @@
 const debug = require('debug')('core:coin')
 const Okex = require('./lib/okex.js')
 const Binance = require('./lib/binance.js')
+const Bithumb = require('./lib/bithumb.js')
 const Huobi = require('./lib/huobi.js')
 const Hitbtc = require('./lib/hitbtc.js')
 const Bitfinex = require('./lib/bitfinex.js')
@@ -29,6 +30,9 @@ class Coin {
         break
       case 'binance':
         this.xc = new Binance(config)
+        break
+      case 'bithumb':
+        this.xc = new Bithumb(config)
         break
       case 'Huobi':
         this.xc = new Huobi(config)
@@ -69,7 +73,6 @@ class Coin {
       default:
         throw new Error('core:coin.js, config.name (' + config.name + ') not defined')
     }
-    debug('constructor is called')
   }
 
   getConfig () {
@@ -77,14 +80,19 @@ class Coin {
     return this.config
   }
 
-  getCurrency () {
-    debug('getCurrency is called')
-    return this.xc.getCurrency()
+  getMarkets () {
+    debug('getMarkets is called')
+    return this.xc.getMarkets()
   }
 
   getSymbols () {
     debug('getSymbols is called')
     return this.xc.getSymbols()
+  }
+
+  getCurrencies () {
+    debug('getCurrency is called')
+    return this.xc.getCurrencies()
   }
 
   getTicker (symbol) {
