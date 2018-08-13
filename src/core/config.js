@@ -1,10 +1,7 @@
 'use strict'
 
 const debug = require('debug')('core:config')
-const fs = require('fs')
-const path = require('path')
-const configFile = path.resolve(process.cwd(), './config.json')
-const config = JSON.parse(fs.readFileSync(configFile))
+const config = require('../../config')
 
 debug('src/core/config.js is called')
 debug('config file parse result:')
