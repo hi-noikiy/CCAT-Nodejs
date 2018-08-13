@@ -1,8 +1,10 @@
 'use strict'
 
 module.exports = {
-  entry: 'src/core/index.js',
+  webpack: {},
   karma: {
     browsers: ['ChromiumHeadless']
-  }
+  },
+  hooks: {},
+  entry: 'src/core/index.js',
 }

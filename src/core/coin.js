@@ -75,9 +75,14 @@ class Coin {
     }
   }
 
+  setProxy (agent) {
+    debug('setProxy is called')
+    return this.xc.setProxy(agent)
+  }
+
   getConfig () {
     debug('getConfig is called')
-    return this.config
+    return this.xc.getConfig()
   }
 
   getMarkets () {

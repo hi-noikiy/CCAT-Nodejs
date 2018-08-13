@@ -12,16 +12,7 @@ const Coin = require('../../src/core/coin.js')
 const config = require('../../src/core/config.js').binance
 const binance = new Coin(config)
 
-const proxy = require('../../src/core/config.js').proxy
-const ProxyAgent = require('proxy-agent')
-
 describe('binance.spec.js', () => {
-  it('binance setProxy', () => {
-    binance.setProxy(new ProxyAgent(proxy.url))
-    var res = binance.getConfig().xc
-    // console.log(res)
-    expect(res.agent.proxyUri).to.equal(proxy.url)
-  })
   it('binance getConfig', () => {
     var res = binance.getConfig().config
     // console.log(res)

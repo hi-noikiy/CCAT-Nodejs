@@ -2,9 +2,6 @@
 
 const debug = require('debug')('core:lib:binance')
 const ccxt = require('ccxt')
-const proxy = require('../config.js').proxy
-const SocksProxyAgent = require('socks-proxy-agent')
-const HttpsProxyAgent = require('https-proxy-agent')
 
 debug('src/core/lib/binance.js is called')
 
@@ -18,17 +15,20 @@ class binance {
       timeout: 30000,
       enableRateLimit: true
     })
-    if (proxy.name === 'socks') {
-      this.binanceAPI.agent = new SocksProxyAgent(proxy.url)
-    } else if (proxy.name === 'https') {
-      this.binanceAPI.agent = new HttpsProxyAgent(proxy.url)
-    }
     debug(this.binanceAPI)
+  }
+
+  setProxy (agent) {
+    debug('setProxy is called')
+    this.binanceAPI.agent = agent
   }
 
   getConfig () {
     debug('getConfig is called')
-    return this.config
+    return {
+      config: this.config,
+      xc: this.binanceAPI
+    }
   }
 
   async getMarkets () {
