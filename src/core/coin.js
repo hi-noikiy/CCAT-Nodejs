@@ -95,49 +95,69 @@ class Coin {
     return this.xc.getCurrencies()
   }
 
-  getTicker (symbol) {
+  getTicker (symbol, params = {}) {
     debug('getTicker is called')
-    return this.xc.getTicker(symbol)
+    return this.xc.getTicker(symbol, params)
   }
 
-  getDepth (symbol, deep) {
+  getTickers (symbols, params = {}) {
+    debug('getTickers is called')
+    return this.xc.getTickers(symbols, params)
+  }
+
+  getDepth (symbol, deep = undefined, params = {}) {
     debug('getDepth is called')
-    return this.xc.getDepth(symbol, deep)
+    return this.xc.getDepth(symbol, deep, params)
   }
 
-  createOrder (symbol, side, type, price, amount) {
+  createOrder (symbol, type, side, amount, price = undefined, params = {}) {
     debug('createOrder is called')
-    return this.xc.createOrder(symbol, side, type, price, amount)
+    return this.xc.createOrder(symbol, type, side, amount, price, params)
   }
 
-  cancelOrders () {
-    debug('createOrder is called')
-    return this.xc.cancelOrders()
+  cancelOrder (id, symbol = undefined, params = {}) {
+    debug('cancelOrder is called')
+    return this.xc.cancelOrder(id, symbol, params)
   }
 
-  cancelOrderByID (id) {
-    debug('cancelOrderByID is called')
-    return this.xc.cancelOrderByID(id)
+  getOrder (id, symbol = undefined, params = {}) {
+    debug('getOrder is called')
+    return this.xc.getOrder(id, symbol, params)
   }
 
-  getOrders (symbol, type, size) {
+  getOrders (symbol = undefined, since = undefined, limit = undefined, params = {}) {
     debug('getOrders is called')
-    return this.xc.getOrders(symbol, type, size)
+    return this.xc.getOrders(symbol, since, limit, params)
   }
 
-  getOrderByID (id) {
-    debug('getOrderByID is called')
-    return this.xc.getOrderByID(id)
+  getOpenOrders (symbol = undefined, since = undefined, limit = undefined, params = {}) {
+    debug('getOpenOrders is called')
+    return this.xc.getOpenOrders(symbol, since, limit, params)
   }
 
-  getBalance () {
+  getClosedOrders (symbol = undefined, since = undefined, limit = undefined, params = {}) {
+    debug('getClosedOrders is called')
+    return this.xc.getClosedOrders(symbol, since, limit, params)
+  }
+
+  getTrades (symbol = undefined, since = undefined, limit = undefined, params = {}) {
+    debug('getTrades is called')
+    return this.xc.getTrades(symbol, since, limit, params)
+  }
+
+  getBalance (params = {}) {
     debug('getBalance is called')
-    return this.xc.getBalance()
+    return this.xc.getBalance(params)
   }
 
-  getBalanceByCurrency (currency) {
-    debug('getBalanceByCurrency is called')
-    return this.xc.getBalanceByCurrency(currency)
+  calculateFee (symbol, type, side, amount, price, takerOrMaker = 'taker', params = {}) {
+    debug('calculateFee is called')
+    return this.xc.calculateFee(symbol, type, side, amount, price, takerOrMaker, params)
+  }
+
+  withdraw (currency, amount, address, tag = undefined, params = {}) {
+    debug('withdraw is called')
+    return this.xc.withdraw(currency, amount, address, tag, params)
   }
 }
 

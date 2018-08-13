@@ -21,27 +21,92 @@ describe('binance.spec.js', () => {
   })
   it('binance getMarkets', () => {
     return binance.getMarkets().then((res) => {
-      console.log(res)
+      // console.log(res)
+      expect(res).not.equal('')
     })
   })
   it('binance getSymbols', () => {
     return binance.getSymbols().then((res) => {
-      console.log(res)
+      // console.log(res)
+      expect(res).not.equal('')
     })
   })
   it('binance getCurrencies', () => {
     return binance.getCurrencies().then((res) => {
-      console.log(res)
+      // console.log(res)
+      expect(res).not.equal('')
     })
   })
   it('binance getTicker', () => {
-    return binance.getTicker('BTC/USDT').then((res) => {
-      console.log(res)
+    return binance.getTicker('ETH/USDT').then((res) => {
+      // console.log(res)
+      expect(res).not.equal('')
+    })
+  })
+  it('binance getTickers', () => {
+    return binance.getTickers('BTC/USDT,ETH/USDT').then((res) => {
+      // console.log(res)
+      expect(res).not.equal('')
     })
   })
   it('binance getDepth', () => {
     return binance.getDepth('BTC/USDT', 5).then((res) => {
-      console.log(res)
+      // console.log(res)
+      expect(res).not.equal('')
+    })
+  })
+  it('binance createOrder', () => {
+    // return binance.createOrder('ETH/USDT', 'limit', 'buy', 0.05, 315).then((res) => {
+    //   // console.log(res)
+    //   expect(res).not.equal('')
+    // })
+  })
+  it('binance cancelOrder', () => {
+    // return binance.cancelOrder('102626161', 'ETH/USDT').then((res) => {
+    //   // console.log(res)
+    //   expect(res).not.equal('')
+    // })
+  })
+  it('binance getOrder', () => {
+    return binance.getOrder('102626161', 'ETH/USDT').then((res) => {
+      // console.log(res)
+      expect(res).not.equal('')
+    })
+  })
+  it('binance getOrders', () => {
+    return binance.getOrders('ETH/USDT', new Date('2018-08-01 00:00:00'), 10).then((res) => {
+      // console.log(res)
+      expect(res).not.equal('')
+    })
+  })
+  it('binance getOpenOrders', () => {
+    return binance.getOpenOrders('ETH/USDT', new Date('2018-08-01 00:00:00'), 10).then((res) => {
+      // console.log(res)
+      expect(res).not.equal('')
+    })
+  })
+  it('binance getClosedOrders', () => {
+    return binance.getClosedOrders('ETH/USDT', new Date('2018-08-01 00:00:00'), 10).then((res) => {
+      // console.log(res)
+      expect(res).not.equal('')
+    })
+  })
+  it('binance getTrades', () => {
+    return binance.getTrades('ETH/USDT', new Date('2018-08-01 00:00:00'), 10).then((res) => {
+      // console.log(res)
+      expect(res).not.equal('')
+    })
+  })
+  it('binance getBalance', () => {
+    return binance.getBalance().then((res) => {
+      // console.log(res)
+      expect(res).not.equal('')
+    })
+  })
+  it('binance calculateFee', () => {
+    return binance.calculateFee('ETH/USDT', 'limit', 'buy', 0.05, 315, 'maker').then((res) => {
+      // console.log(res)
+      expect(res).not.equal('')
     })
   })
 })
