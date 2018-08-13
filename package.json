@@ -9,9 +9,9 @@
     "debug:cli": "DEBUG=cli:*,core:* node ./src/cli/index.js",
     "debug:ui": "DEBUG=ui:*,core:* node ./src/ui/index.js",
     "lint": "aegir lint",
-    "test": "aegir test  --target node --target browser",
-    "test:node": "aegir test --target node",
-    "test:browser": "aegir test --target browser",
+    "test": "aegir test  --target node --timeout 30000",
+    "test:node": "aegir test --target node --timeout 30000",
+    "test:browser": "aegir test --target browser --timeout 30000",
     "build": "aegir build",
     "docs": "aegir docs",
     "release": "aegir release --docs",
@@ -43,7 +43,9 @@
     "ccxt": "^1.15.19",
     "mathjs": "^5.0.0",
     "colors": "^1.3.0",
-    "readline-sync": "^1.4.9"
+    "readline-sync": "^1.4.9",
+    "socks-proxy-agent": "^4.0.1",
+    "https-proxy-agent": "^2.2.1"
   },
   "author": {
     "name": "Paul Zhang",

@@ -16,6 +16,7 @@ const help = require('./help.js').printHelp
 const markets = [
   'Okex',
   'Binance',
+  'Bithumb',
   'Huobi',
   'Hitbtc',
   'Bitfinex',

@@ -1,0 +1,83 @@
+'use strict'
+
+module.exports = {
+  proxy: {
+    name: 'socks',
+    url: 'socks://127.0.0.1:1080'
+  },
+  okex: {
+    name: 'okex',
+    key: '',
+    secret: ''
+  },
+  binance: {
+    name: 'binance',
+    key: '',
+    secret: ''
+  },
+  bithumb: {
+    name: 'bithumb',
+    key: '',
+    secret: ''
+  },
+  huobi: {
+    name: 'huobi',
+    key: '',
+    secret: ''
+  },
+  hitbtc: {
+    name: 'hitbtc',
+    key: '',
+    secret: ''
+  },
+  bitfinex: {
+    name: 'bitfinex',
+    key: '',
+    secret: ''
+  },
+  zb: {
+    name: 'zb',
+    key: '',
+    secret: ''
+  },
+  lbank: {
+    name: 'lbank',
+    key: '',
+    secret: ''
+  },
+  quolinex: {
+    name: 'quolinex',
+    key: '',
+    secret: ''
+  },
+  bibox: {
+    name: 'bibox',
+    key: '',
+    secret: ''
+  },
+  gate: {
+    name: 'gate',
+    key: '',
+    secret: ''
+  },
+  fcoin: {
+    name: 'fcoin',
+    key: '',
+    secret: ''
+  },
+  coinex: {
+    name: 'coinex',
+    key: '',
+    secret: ''
+  },
+  coinpark: {
+    name: 'coinpark',
+    key: '',
+    secret: ''
+  },
+  coinbig: {
+    name: 'coinbig',
+    key: '',
+    secret: ''
+  }
+}

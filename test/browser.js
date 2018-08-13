@@ -4,6 +4,7 @@
 describe('browser.js', () => {
   require('./specs/okex.js')
   require('./specs/binance.js')
+  require('./specs/bithumb.js')
   require('./specs/huobi.js')
   require('./specs/hitbtc.js')
   require('./specs/bitfinex.js')

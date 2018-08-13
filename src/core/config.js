@@ -1,16 +1,17 @@
 'use strict'
 
 const debug = require('debug')('core:config')
-const fs = require('fs')
-const path = require('path')
-const configFile = path.resolve(process.cwd(), './config.json')
-const config = JSON.parse(fs.readFileSync(configFile))
+const config = require('../../config')
 
 debug('src/core/config.js is called')
 debug('config file parse result:')
 debug(config)
 
 module.exports = {
+  proxy: {
+    name: config.proxy.name || 'https',
+    url: config.proxy.url || process.env.http_proxy
+  },
   okex: {
     name: config.okex.name,
     key: config.okex.key,
@@ -20,6 +21,11 @@ module.exports = {
     name: config.binance.name,
     key: config.binance.key,
     secret: config.binance.secret
+  },
+  bithumb: {
+    name: config.bithumb.name,
+    key: config.bithumb.key,
+    secret: config.bithumb.secret
   },
   huobi: {
     name: config.huobi.name,
