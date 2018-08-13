@@ -8,6 +8,10 @@ debug('config file parse result:')
 debug(config)
 
 module.exports = {
+  proxy: {
+    name: config.proxy.name,
+    url: config.proxy.url
+  },
   okex: {
     name: config.okex.name,
     key: config.okex.key,

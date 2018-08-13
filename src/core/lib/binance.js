@@ -2,6 +2,9 @@
 
 const debug = require('debug')('core:lib:binance')
 const ccxt = require('ccxt')
+const proxy = process.env.socks_proxy || require('../config.js').proxy
+const SocksProxyAgent = require('socks-proxy-agent')
+const HttpsProxyAgent = require('https-proxy-agent')
 
 debug('src/core/lib/binance.js is called')
 
