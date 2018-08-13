@@ -2,7 +2,7 @@
 
 const debug = require('debug')('core:lib:binance')
 const ccxt = require('ccxt')
-const proxy = process.env.socks_proxy || require('../config.js').proxy
+const proxy = require('../config.js').proxy
 const SocksProxyAgent = require('socks-proxy-agent')
 const HttpsProxyAgent = require('https-proxy-agent')
 
@@ -18,6 +18,11 @@ class binance {
       timeout: 30000,
       enableRateLimit: true
     })
+    if (proxy.name === 'socks') {
+      this.binanceAPI.agent = new SocksProxyAgent(proxy.url)
+    } else if (proxy.name === 'https') {
+      this.binanceAPI.agent = new HttpsProxyAgent(proxy.url)
+    }
     debug(this.binanceAPI)
   }
 
@@ -32,13 +37,15 @@ class binance {
     return this.binanceAPI.markets
   }
 
-  getSymbols () {
+  async getSymbols () {
     debug('getSymbols is called')
+    await this.binanceAPI.loadMarkets()
     return this.binanceAPI.symbols
   }
 
-  getCurrencies () {
+  async getCurrencies () {
     debug('getCurrencies is called')
+    await this.binanceAPI.loadMarkets()
     return this.binanceAPI.currencies
   }
 
@@ -56,7 +63,7 @@ class binance {
 
   async createOrder (symbol, side, type, price, amount) {
     debug('createOrder is called')
-    return this.binanceAPI.createOrder(symbol, side, type, price, amount)
+    return this.binanceAPI.createLimitOrder(symbol, side, type, price, amount)
   }
 }
 

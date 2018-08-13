@@ -3,7 +3,7 @@
 module.exports = {
   proxy: {
     name: 'socks',
-    url: 'socks5://127.0.0.1:1080'
+    url: 'socks://127.0.0.1:1080'
   },
   okex: {
     name: 'okex',

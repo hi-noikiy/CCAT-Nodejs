@@ -9,8 +9,8 @@ debug(config)
 
 module.exports = {
   proxy: {
-    name: config.proxy.name,
-    url: config.proxy.url
+    name: config.proxy.name || 'https',
+    url: config.proxy.url || process.env.http_proxy
   },
   okex: {
     name: config.okex.name,

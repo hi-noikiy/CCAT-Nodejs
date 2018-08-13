@@ -19,25 +19,29 @@ describe('binance.spec.js', () => {
     expect(res.key).to.equal(config.key)
     expect(res.secret).to.equal(config.secret)
   })
-  it('binance getMarkets', async () => {
-    var res = await binance.getMarkets()
-    // expect(JSON.stringify(res)).not.to.equal('{}')
-    console.log(res)
+  it('binance getMarkets', () => {
+    return binance.getMarkets().then((res) => {
+      console.log(res)
+    })
   })
   it('binance getSymbols', () => {
-    var res = binance.getSymbols()
-    console.log(res)
+    return binance.getSymbols().then((res) => {
+      console.log(res)
+    })
   })
   it('binance getCurrencies', () => {
-    var res = binance.getCurrencies()
-    console.log(res)
+    return binance.getCurrencies().then((res) => {
+      console.log(res)
+    })
   })
-  it('binance getTicker', async () => {
-    var res = await binance.getTicker('BTC/USDT')
-    console.log(res)
+  it('binance getTicker', () => {
+    return binance.getTicker('BTC/USDT').then((res) => {
+      console.log(res)
+    })
   })
-  it('binance getDepth', async () => {
-    var res = await binance.getDepth('BTC/USDT', 20)
-    console.log(res)
+  it('binance getDepth', () => {
+    return binance.getDepth('BTC/USDT', 5).then((res) => {
+      console.log(res)
+    })
   })
 })
