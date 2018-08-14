@@ -13,6 +13,11 @@ const config = require('../../src/core/config.js').binance
 const binance = new Coin(config)
 
 describe('binance.spec.js', () => {
+  it('binance setProxy', () => {
+    var res = binance.getConfig().xc
+    console.log(res)
+    expect(res.agent.proxyUri).to.equal(process.env.http_proxy)
+  })
   it('binance getConfig', () => {
     var res = binance.getConfig().config
     // console.log(res)
