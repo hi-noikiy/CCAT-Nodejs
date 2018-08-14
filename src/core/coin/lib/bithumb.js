@@ -1,9 +1,9 @@
 'use strict'
 
-const debug = require('debug')('core:lib:bithumb')
+const debug = require('debug')('core:coin:lib:bithumb')
 const ccxt = require('ccxt')
 
-debug('src/core/lib/bithumb.js is called')
+debug('src/core/coin/lib/bithumb.js is called')
 
 class bithumb {
   constructor (config) {

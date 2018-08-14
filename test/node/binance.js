@@ -8,7 +8,7 @@ const dirtyChai = require('dirty-chai')
 const expect = chai.expect
 chai.use(dirtyChai)
 
-const Coin = require('../../src/core/coin.js')
+const Coin = require('../../src/core/coin/coin.js')
 const config = require('../../src/core/config.js').binance
 const binance = new Coin(config)
 

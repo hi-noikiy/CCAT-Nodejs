@@ -1,9 +1,9 @@
 'use strict'
 
-const debug = require('debug')('core:lib:binance')
+const debug = require('debug')('core:coin:lib:binance')
 const ccxt = require('ccxt')
 
-debug('src/core/lib/binance.js is called')
+debug('src/core/coin/lib/binance.js is called')
 
 class binance {
   constructor (config) {
