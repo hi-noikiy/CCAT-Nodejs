@@ -1,9 +1,9 @@
 'use strict'
 
-const debug = require('debug')('core:lib:fcoin')
+const debug = require('debug')('core:coin:lib:fcoin')
 const ccxt = require('ccxt')
 
-debug('src/core/lib/fcoin.js is called')
+debug('src/core/coin/lib/fcoin.js is called')
 
 class fcoin {
   constructor (config) {
