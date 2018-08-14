@@ -27,7 +27,7 @@ class binance {
     debug('getConfig is called')
     return {
       config: this.config,
-      xc: this.api
+      api: this.api
     }
   }
 

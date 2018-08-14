@@ -9,13 +9,13 @@ class bithumb {
   constructor (config) {
     debug('constructor is called')
     this.config = config
-    this.binanceAPI = new ccxt.bithumb({ // eslint-disable-line
+    this.api = new ccxt.bithumb({ // eslint-disable-line
       apiKey: config.key,
       secret: config.secret,
       timeout: 30000,
       enableRateLimit: true
     })
-    debug(this.binanceAPI)
+    debug(this.api)
   }
 
   setProxy (agent) {
@@ -27,7 +27,7 @@ class bithumb {
     debug('getConfig is called')
     return {
       config: this.config,
-      xc: this.api
+      api: this.api
     }
   }
 
@@ -58,7 +58,7 @@ class bithumb {
   async getTickers (symbols, params) {
     debug('getTickers is called')
     var res = await this.api.fetchTickers(symbols, params)
-    return res
+    return this.api.filterByArray(res, 'symbol', symbols)
   }
 
   async getDepth (symbol, deep, params) {
