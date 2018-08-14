@@ -1,6 +1,16 @@
 'use strict'
 
-const debug = require('debug')('core:engine')
-debug('src/core/engine.js is called')
+const debug = require('debug')('core:engine:engine')
+const Calc = require('./lib/calc.js')
+const Risk = require('./lib/risk.js')
+const Strategy = require('./lib/Strategy.js')
 
-// for cli, to be continue
+debug('src/core/engine/engine.js is called')
+
+// to be continue
+
+class Engine {
+
+}
+
+module.exports = Engine

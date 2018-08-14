@@ -121,6 +121,7 @@ class binance {
     var res = await this.api.calculateFee(symbol, type, side, amount, price, takerOrMaker, params)
     return res
   }
+
   async withdraw (currency, amount, address, tag, params) {
     debug('withdraw is called')
     var res = await this.api.withdraw(currency, amount, address, tag, params)

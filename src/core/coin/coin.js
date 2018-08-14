@@ -1,6 +1,6 @@
 'use strict'
 
-const debug = require('debug')('core:coin')
+const debug = require('debug')('core:coin:coin')
 const Okex = require('./lib/okex.js')
 const Binance = require('./lib/binance.js')
 const Bithumb = require('./lib/bithumb.js')
@@ -17,7 +17,7 @@ const Coinex = require('./lib/coinex.js')
 const Coinpark = require('./lib/coinpark.js')
 const Coinbig = require('./lib/fcoin.js')
 
-debug('src/core/coin.js is called')
+debug('src/core/coin/coin.js is called')
 
 class Coin {
   constructor (config) {
@@ -71,7 +71,7 @@ class Coin {
         this.xc = new Coinbig(config)
         break
       default:
-        throw new Error('core:coin.js, config.name (' + config.name + ') not defined')
+        throw new Error('src/core/coin/coin.js, config.name (' + config.name + ') not defined')
     }
   }
 

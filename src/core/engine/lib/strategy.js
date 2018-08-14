@@ -1,6 +1,12 @@
 'use strict'
 
-const debug = require('debug')('core:engine:strategy')
-debug('src/core/strategy.js is called')
+const debug = require('debug')('core:engine:lib:strategy')
+debug('src/core/engine/lib/strategy.js is called')
 
-// for cli, to be continue
+// to be continue
+
+class Strategy {
+
+}
+
+module.exports = Strategy

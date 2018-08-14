@@ -1,6 +1,12 @@
 'use strict'
 
-const debug = require('debug')('core:engine:risk')
-debug('src/core/risk.js is called')
+const debug = require('debug')('core:engine:lib:risk')
+debug('src/core/engine/lib/risk.js is called')
 
-// for cli, to be continue
+// to be continue
+
+class Risk {
+
+}
+
+module.exports = Risk
