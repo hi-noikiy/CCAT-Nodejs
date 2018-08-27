@@ -69,8 +69,19 @@ CCAT-Core has two main part, one is src/coin part for trading in crypto exchange
 
 ### 1.1 Currently Supported Cryptocurrency Exchange Markets
 
-| No. | id | name
+| No. | id   | name | status | certified   | others |
+| --- | ---- | ---- | ------ | ----------- | ------ |
+| 1   | okex | OKex | coding | not passing |        |
 
+### 1.2 Currently Supported Arbitrage Strategy and Risk Control
+
+| No. | type               | id           | name                | status | certified | others |
+| --- | ------------------ | ------------ | ------------------- | ------ | --------- | ------ |
+|     | Arbitrage Strategy |              |                     |        |           |        |
+| 1.  |                    | bi-arbitrage | Bilateral Arbitrage | Coding |           |        |
+| 2.  |                    | tr-arbitrage | Triangle Arbitrage  | Coding |           |        |
+|     | Risk Control       |              |                     |        |           |        |
+|     |                    |              |                     |        |           |        |
 
 ## 2. Install
 
@@ -84,7 +95,7 @@ CCAT-Core has two main part, one is src/coin part for trading in crypto exchange
 
 The code published to npm that gets loaded on require is in fact an ES5 transpiled version with the right shims added. This means that you can require it and use with your favourite bundler without having to adjust asset management process.
 
-```js
+```javascript
 const CCAT-Core = require('CCAT-Core')
 ```
 
@@ -103,14 +114,13 @@ Loading this module through a script tag will make the ```CCAT-Core``` obj avail
 
 ### 3.1 Example
 
-```JavaScript
+```javascript
 
 ```
 
 ### 3.2 API
 
 See the doc. (To be continue)
-
 
 ## 4. Contribute
 
@@ -121,9 +131,8 @@ Contributions welcome. Please check out [the issues](https://github.com/OpenInfo
 @ccxt
 [ccxt](https://github.com/ccxt/ccxt.git)
 
-@fcoin-api
-[superhuai](https://github.com/superhuai/fcoin-api.git)
-
+@mathjs
+[mathjs](https://github.com/josdejong/mathjs.git)
 
 ## 6. Donate
 
