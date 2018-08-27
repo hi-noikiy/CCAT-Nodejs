@@ -13,26 +13,35 @@
 > OpenInfoGraphic implemetation. Core of Crypto Currency Arbitrage Trading
 [CCAT-Core](https://github.com/OpenInfoGraphic/CCAT-Core) specification
 
-> 维护者:
+> Maintainer:
 [Paul Zhang](https://github.com/paulplayer)
 
-## 目录
+## Catalogue
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-- [CCAT-Core](#CCAT-Core)
+- [CCAT-Core](#ccat-core)
 	- [( Crypto Currency Arbitrage Trading )](#-crypto-currency-arbitrage-trading-)
-	- [目录](#目录)
-	- [1. 安装](#1-安装)
-		- [1.1 In Node.js through npm](#11-in-nodejs-through-npm)
-		- [1.2 Browser: Browserify, Webpack, other bundlers](#12-browser-browserify-webpack-other-bundlers)
-		- [1.3 In the Browser through `<script>` tag](#13-in-the-browser-through-script-tag)
-	- [2. 使用](#2-使用)
-		- [2.1 Example](#21-example)
-		- [2.2 API](#22-api)
-	- [3. Contribute](#3-contribute)
-	- [4. 致谢](#4-致谢)
-	- [5. 资助我们](#5-资助我们)
-	- [6. License](#6-license)
+	- [Catalogue](#catalogue)
+	- [0. Project Status ( Developing )](#0-project-status-developing-)
+		- [0.1 Schedules Timeline](#01-schedules-timeline)
+			- [2018.07.24](#20180724)
+			- [2018.08.24](#20180824)
+			- [2018.09.24](#20180924)
+		- [0.2 Bugs and issues](#02-bugs-and-issues)
+	- [1. Abstract](#1-abstract)
+		- [1.1 Currently Supported Cryptocurrency Exchange Markets](#11-currently-supported-cryptocurrency-exchange-markets)
+		- [1.2 Currently Supported Arbitrage Strategy and Risk Control](#12-currently-supported-arbitrage-strategy-and-risk-control)
+	- [2. Install](#2-install)
+		- [2.1 In Node.js through npm](#21-in-nodejs-through-npm)
+		- [2.2 Browser: Browserify, Webpack, other bundlers](#22-browser-browserify-webpack-other-bundlers)
+		- [2.3 In the Browser through `<script>` tag](#23-in-the-browser-through-script-tag)
+	- [3. Usage](#3-usage)
+		- [3.1 Example](#31-example)
+		- [3.2 API](#32-api)
+	- [4. Contribute](#4-contribute)
+	- [5. Acknowledgement](#5-acknowledgement)
+	- [6. Donate](#6-donate)
+	- [7. License](#7-license)
 
 <!-- /TOC -->
 
