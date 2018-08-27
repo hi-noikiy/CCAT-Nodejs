@@ -72,6 +72,11 @@ module.exports = {
     key: config.gate.key,
     secret: config.gate.secret
   },
+  cryptopia: {
+    name: config.cryptopia.name,
+    key: config.cryptopia.key,
+    secret: config.cryptopia.secret
+  },
   fcoin: {
     name: config.fcoin.name,
     key: config.fcoin.key,
