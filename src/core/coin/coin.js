@@ -1,6 +1,6 @@
 'use strict'
 
-const debug = require('debug')('core:coin')
+const debug = require('debug')('core:coin:coin')
 const Okex = require('./lib/okex.js')
 const Binance = require('./lib/binance.js')
 const Bithumb = require('./lib/bithumb.js')
@@ -12,12 +12,13 @@ const Lbank = require('./lib/lbank.js')
 const Quolinex = require('./lib/quolinex.js')
 const Bibox = require('./lib/bibox.js')
 const Gate = require('./lib/gate.js')
+const Cryptopia = require('./lib/cryptopia.js')
 const Fcoin = require('./lib/fcoin.js')
 const Coinex = require('./lib/coinex.js')
 const Coinpark = require('./lib/coinpark.js')
-const Coinbig = require('./lib/fcoin.js')
+const Coinbig = require('./lib/coinbig.js')
 
-debug('src/core/coin.js is called')
+debug('src/core/coin/coin.js is called')
 
 class Coin {
   constructor (config) {
@@ -58,6 +59,9 @@ class Coin {
       case 'gate':
         this.xc = new Gate(config)
         break
+      case 'cryptopia':
+        this.xc = new Cryptopia(config)
+        break
       case 'fcoin':
         this.xc = new Fcoin(config)
         break
@@ -71,7 +75,7 @@ class Coin {
         this.xc = new Coinbig(config)
         break
       default:
-        throw new Error('core:coin.js, config.name (' + config.name + ') not defined')
+        throw new Error('src/core/coin/coin.js, config.name (' + config.name + ') not defined')
     }
   }
 
