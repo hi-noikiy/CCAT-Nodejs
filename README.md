@@ -10,7 +10,7 @@
 ![Nodejs](https://img.shields.io/badge/Node.js-%3E%3D8.11.0-orange.svg?style=plastic)
 ![npm](https://img.shields.io/badge/npm-%3E%3D6.0.0-orange.svg?style=plastic)
 
-> OpenInfoGraphic implemetation of Crypto Currency Arbitrage Trading
+> OpenInfoGraphic implemetation. Core of Crypto Currency Arbitrage Trading
 [CCAT-Core](https://github.com/OpenInfoGraphic/CCAT-Core) specification
 
 > 维护者:
@@ -36,15 +36,51 @@
 
 <!-- /TOC -->
 
-## 1. 安装
+## 0. Project Status ( Developing )
 
-### 1.1 In Node.js through npm
+### 0.1 Schedules Timeline
+
+#### 2018.07.24
+- [x] Start part-time job coding, based on ccxt and other js api
+
+#### 2018.08.24
+- [x] Make the project framework into two part, as src/coin and src/engine.
+- [x] Make crypto currencise trading api a universe api, as src/coin/coin.js.
+- [x] Done the following src/coin/lib
+	- [x] /lib/binance.js
+	- [x] /lib/bithumb.js
+
+#### 2018.09.24
+- [x] Make the src/engine a light weighted engine with arbitrage strategy and risk control.
+- [ ] Done the following src/engine/lib
+	- [ ] /lib/calc.js
+	- [ ] /lib/risk.js
+	- [ ] /lib/strategy.js
+
+### 0.2 Bugs and issues
+
+- [ ] Browser proxy issue in karma test, [see here](https://github.com/OpenInfoGraphic/CCAT-Core/issues)
+
+## 1. Abstract
+
+CCAT-Core is designed as a light weighted core lib for crypto currency abitrage trading, whcih is developed in purely javascript, supporting both nodejs and browsers.
+
+CCAT-Core has two main part, one is src/coin part for trading in crypto exchanges, the other is src/engine part to make the arbitrage strategy and risk control.
+
+### 1.1 Currently Supported Cryptocurrency Exchange Markets
+
+| No. | id | name
+
+
+## 2. Install
+
+### 2.1 In Node.js through npm
 
 ```bash
 > npm install --save CCAT-Core
 ```
 
-### 1.2 Browser: Browserify, Webpack, other bundlers
+### 2.2 Browser: Browserify, Webpack, other bundlers
 
 The code published to npm that gets loaded on require is in fact an ES5 transpiled version with the right shims added. This means that you can require it and use with your favourite bundler without having to adjust asset management process.
 
@@ -53,7 +89,7 @@ const CCAT-Core = require('CCAT-Core')
 ```
 
 
-### 1.3 In the Browser through `<script>` tag
+### 2.3 In the Browser through `<script>` tag
 
 Loading this module through a script tag will make the ```CCAT-Core``` obj available in the global namespace.
 
@@ -63,24 +99,24 @@ Loading this module through a script tag will make the ```CCAT-Core``` obj avail
 <script src="https://unpkg.com/CCAT-Core/dist/index.js"></script>
 ```
 
-## 2. 使用
+## 3. Usage
 
-### 2.1 Example
+### 3.1 Example
 
 ```JavaScript
 
 ```
 
-### 2.2 API
+### 3.2 API
 
 See the doc. (To be continue)
 
 
-## 3. Contribute
+## 4. Contribute
 
 Contributions welcome. Please check out [the issues](https://github.com/OpenInfoGraphic/CCAT-Core/issues).
 
-## 4. 致谢
+## 5. Acknowledgement
 
 @ccxt
 [ccxt](https://github.com/ccxt/ccxt.git)
@@ -89,12 +125,18 @@ Contributions welcome. Please check out [the issues](https://github.com/OpenInfo
 [superhuai](https://github.com/superhuai/fcoin-api.git)
 
 
-## 5. 资助我们
+## 6. Donate
 
 Cryptocurrency is welcomed.
 
+[BTC](#):
+
+[LTC](#):
+
 [ETH](#): 0x16EEbbA3A0aa82825c5b3E35EF15E3aCec6450a3
 
-## 6. License
+[BCH](#):
 
-[MIT](LICENSE) © 2016 Protocol Labs Inc.
+## 7. License
+
+[MIT](LICENSE) © 2018 OpenInfoGraphic Inc.

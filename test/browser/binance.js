@@ -13,11 +13,6 @@ const config = require('../../src/core/config.js').binance
 const binance = new Coin(config)
 
 describe('binance.spec.js', () => {
-  it('binance setProxy', () => {
-    var res = binance.getConfig().xc
-    console.log(res)
-    expect(res.agent.proxyUri).to.equal(process.env.http_proxy)
-  })
   it('binance getConfig', () => {
     var res = binance.getConfig().config
     // console.log(res)
@@ -63,21 +58,21 @@ describe('binance.spec.js', () => {
   })
   it('binance createOrder', () => {
     // return binance.createOrder('ETH/USDT', 'limit', 'buy', 0.05, 315).then((res) => {
-    //   // console.log(res)
+    //   console.log(res)
     //   expect(res).not.equal('')
     // })
   })
   it('binance cancelOrder', () => {
-    // return binance.cancelOrder('102626161', 'ETH/USDT').then((res) => {
-    //   // console.log(res)
+    // return binance.cancelOrder('xxx', 'ETH/USDT').then((res) => {
+    //   console.log(res)
     //   expect(res).not.equal('')
     // })
   })
   it('binance getOrder', () => {
-    return binance.getOrder('102626161', 'ETH/USDT').then((res) => {
-      // console.log(res)
-      expect(res).not.equal('')
-    })
+    // return binance.getOrder('xxx', 'ETH/USDT').then((res) => {
+    //   // console.log(res)
+    //   expect(res).not.equal('')
+    // })
   })
   it('binance getOrders', () => {
     return binance.getOrders('ETH/USDT', new Date('2018-08-01 00:00:00'), 10).then((res) => {

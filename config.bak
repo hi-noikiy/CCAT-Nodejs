@@ -60,6 +60,11 @@ module.exports = {
     key: '',
     secret: ''
   },
+  cryptopia: {
+    name: 'cryptopia',
+    key: '',
+    secret: ''
+  },
   fcoin: {
     name: 'fcoin',
     key: '',
