@@ -42,7 +42,7 @@
     "readline-sync": "^1.4.9"
   },
   "dependencies": {
-    "ccxt": "^1.15.19",
+    "ccxt": "^1.17.458",
     "mathjs": "^5.0.0",
     "proxy-agent": "^3.0.1"
   },

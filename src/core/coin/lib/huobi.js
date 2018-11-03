@@ -9,7 +9,7 @@ class huobi {
   constructor (config) {
     debug('constructor is called')
     this.config = config
-    this.api = new ccxt.huobi({ // eslint-disable-line
+    this.api = new ccxt.huobipro({ // eslint-disable-line
       apiKey: config.key,
       secret: config.secret,
       timeout: 30000,

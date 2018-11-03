@@ -48,13 +48,13 @@ describe('okex.spec.js', () => {
     })
   })
   it('okex getTicker', () => {
-    return okex.getTicker('ETH/USDT').then((res) => {
+    return okex.getTicker('TRX/USDT').then((res) => {
       // console.log(res)
       expect(res).not.equal('')
     })
   })
   it('okex getTickers', () => {
-    return okex.getTickers('BTC/USDT,ETH/USDT').then((res) => {
+    return okex.getTickers('BTC/USDT,TRX/USDT').then((res) => {
       // console.log(res)
       expect(res).not.equal('')
     })
@@ -66,43 +66,43 @@ describe('okex.spec.js', () => {
     })
   })
   it('okex createOrder', () => {
-    // return okex.createOrder('ETH/USDT', 'limit', 'buy', 0.05, 315).then((res) => {
+    // return okex.createOrder('TRX/USDT', 'limit', 'buy', 0.05, 315).then((res) => {
     //   console.log(res)
     //   expect(res).not.equal('')
     // })
   })
   it('okex cancelOrder', () => {
-    // return okex.cancelOrder('xxx', 'ETH/USDT').then((res) => {
+    // return okex.cancelOrder('xxx', 'TRX/USDT').then((res) => {
     //   console.log(res)
     //   expect(res).not.equal('')
     // })
   })
   it('okex getOrder', () => {
-    // return okex.getOrder('xxx', 'ETH/USDT').then((res) => {
+    // return okex.getOrder('xxx', 'TRX/USDT').then((res) => {
     //   // console.log(res)
     //   expect(res).not.equal('')
     // })
   })
   it('okex getOrders', () => {
-    return okex.getOrders('ETH/USDT', new Date('2018-08-01 00:00:00'), 10).then((res) => {
+    return okex.getOrders('TRX/USDT', new Date('2018-08-01 00:00:00'), 10).then((res) => {
       // console.log(res)
       expect(res).not.equal('')
     })
   })
   it('okex getOpenOrders', () => {
-    return okex.getOpenOrders('ETH/USDT', new Date('2018-08-01 00:00:00'), 10).then((res) => {
+    return okex.getOpenOrders('TRX/USDT', new Date('2018-08-01 00:00:00'), 10).then((res) => {
       // console.log(res)
       expect(res).not.equal('')
     })
   })
   it('okex getClosedOrders', () => {
-    return okex.getClosedOrders('ETH/USDT', new Date('2018-08-01 00:00:00'), 10).then((res) => {
+    return okex.getClosedOrders('TRX/USDT', new Date('2018-08-01 00:00:00'), 10).then((res) => {
       // console.log(res)
       expect(res).not.equal('')
     })
   })
   it('okex getTrades', () => {
-    return okex.getTrades('ETH/USDT', new Date('2018-08-01 00:00:00'), 10).then((res) => {
+    return okex.getTrades('TRX/USDT', new Date('2018-08-01 00:00:00'), 10).then((res) => {
       // console.log(res)
       expect(res).not.equal('')
     })
@@ -114,7 +114,7 @@ describe('okex.spec.js', () => {
     })
   })
   it('okex calculateFee', () => {
-    return okex.calculateFee('ETH/USDT', 'limit', 'buy', 0.05, 315, 'maker').then((res) => {
+    return okex.calculateFee('TRX/USDT', 'limit', 'buy', 0.05, 315, 'maker').then((res) => {
       // console.log(res)
       expect(res).not.equal('')
     })

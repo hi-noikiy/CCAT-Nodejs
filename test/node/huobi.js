@@ -84,38 +84,38 @@ describe('huobi.spec.js', () => {
     // })
   })
   it('huobi getOrders', () => {
-    return huobi.getOrders('ETH/USDT', new Date('2018-08-01 00:00:00'), 10).then((res) => {
-      // console.log(res)
-      expect(res).not.equal('')
-    })
+    // return huobi.getOrders('ETH/USDT', new Date('2018-08-01 00:00:00'), 10).then((res) => {
+    //   console.log(res)
+    //   expect(res).not.equal('')
+    // })
   })
   it('huobi getOpenOrders', () => {
-    return huobi.getOpenOrders('ETH/USDT', new Date('2018-08-01 00:00:00'), 10).then((res) => {
-      // console.log(res)
-      expect(res).not.equal('')
-    })
+    // return huobi.getOpenOrders('ETH/USDT', new Date('2018-08-01 00:00:00'), 10).then((res) => {
+    //   // console.log(res)
+    //   expect(res).not.equal('')
+    // })
   })
   it('huobi getClosedOrders', () => {
-    return huobi.getClosedOrders('ETH/USDT', new Date('2018-08-01 00:00:00'), 10).then((res) => {
-      // console.log(res)
-      expect(res).not.equal('')
-    })
+    // return huobi.getClosedOrders('ETH/USDT', new Date('2018-08-01 00:00:00'), 10).then((res) => {
+    //   // console.log(res)
+    //   expect(res).not.equal('')
+    // })
   })
   it('huobi getTrades', () => {
-    return huobi.getTrades('ETH/USDT', new Date('2018-08-01 00:00:00'), 10).then((res) => {
-      // console.log(res)
-      expect(res).not.equal('')
-    })
+    // return huobi.getTrades('ETH/USDT', new Date('2018-08-01 00:00:00'), 10).then((res) => {
+    //   // console.log(res)
+    //   expect(res).not.equal('')
+    // })
   })
   it('huobi getBalance', () => {
-    return huobi.getBalance().then((res) => {
-      // console.log(res)
-      expect(res).not.equal('')
-    })
+    // return huobi.getBalance().then((res) => {
+    //   console.log(res)
+    //   expect(res).not.equal('')
+    // })
   })
   it('huobi calculateFee', () => {
     return huobi.calculateFee('ETH/USDT', 'limit', 'buy', 0.05, 315, 'maker').then((res) => {
-      // console.log(res)
+      console.log(res)
       expect(res).not.equal('')
     })
   })

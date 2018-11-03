@@ -3,9 +3,9 @@
 
 describe('node.js', () => {
   require('./node/okex.js')
-  require('./node/binance.js')
-  require('./node/bithumb.js')
-  require('./node/huobi.js')
+  // require('./node/binance.js')
+  // require('./node/bithumb.js')
+  // require('./node/huobi.js')
   // require('./node/hitbtc.js')
   // require('./node/bitfinex.js')
   // require('./node/zb.js')
@@ -13,7 +13,7 @@ describe('node.js', () => {
   // require('./node/quolinex.js')
   // require('./node/bibox.js')
   // require('./node/gate.js')
-  require('./node/cryptopia.js')
+  // require('./node/cryptopia.js')
   // require('./node/fcoin.js')
   // require('./node/coinex.js')
   // require('./node/coinpark.js')
