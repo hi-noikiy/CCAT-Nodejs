@@ -35,7 +35,7 @@ class Coin {
       case 'bithumb':
         this.xc = new Bithumb(config)
         break
-      case 'Huobi':
+      case 'huobi':
         this.xc = new Huobi(config)
         break
       case 'hitbtc':

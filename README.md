@@ -1,17 +1,17 @@
-# CCAT-Core
+# CCAT-Nodejs
 ## ( Crypto Currency Arbitrage Trading )
 
-![npm](https://img.shields.io/badge/Project-CCAT%20Core-blue.svg?style=plastic)
+![npm](https://img.shields.io/badge/Project-CCAT%20Nodejs-blue.svg?style=plastic)
 ![npm](https://img.shields.io/badge/Status-Devloping-blue.svg?style=plastic)
 ![npm](https://img.shields.io/badge/Made%20by-OpenInfoGraphic-blue.svg?style=plastic)
 
-[![Build Status](http://45.76.208.48:8080/buildStatus/icon?job=CCAT-Core&style=plastic)](http://45.76.208.48:8080/job/CCAT-Core)
-[![codecov](https://codecov.io/gh/OpenInfoGraphic/CCAT-Core/branch/master/graph/badge.svg?style=plastic)](https://codecov.io/gh/OpenInfoGraphic/CCAT-Core)
+[![Build Status](http://45.76.208.48:8080/buildStatus/icon?job=CCAT-Nodejs&style=plastic)](http://45.76.208.48:8080/job/CCAT-Nodejs)
+[![codecov](https://codecov.io/gh/OpenInfoGraphic/CCAT-Nodejs/branch/master/graph/badge.svg?style=plastic)](https://codecov.io/gh/OpenInfoGraphic/CCAT-Nodejs)
 ![Nodejs](https://img.shields.io/badge/Node.js-%3E%3D8.11.0-orange.svg?style=plastic)
 ![npm](https://img.shields.io/badge/npm-%3E%3D6.0.0-orange.svg?style=plastic)
 
-> OpenInfoGraphic implemetation. Core of Crypto Currency Arbitrage Trading
-[CCAT-Core](https://github.com/OpenInfoGraphic/CCAT-Core) specification
+> Open InfoCrypto Implemetation. Nodejs version of Crypto Currency Arbitrage Trading
+[CCAT-Nodejs](https://github.com/OpenInfoGraphic/CCAT-Nodejs) specification
 
 > Maintainer:
 [Paul Zhang](https://github.com/paulplayer)
@@ -19,7 +19,7 @@
 ## Catalogue
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-- [CCAT-Core](#ccat-core)
+- [CCAT-Nodejs](#CCAT-Nodejs)
 	- [( Crypto Currency Arbitrage Trading )](#-crypto-currency-arbitrage-trading-)
 	- [Catalogue](#catalogue)
 	- [0. Project Status ( Developing )](#0-project-status-developing-)
@@ -68,13 +68,13 @@
 
 ### 0.2 Bugs and issues
 
-- [ ] Browser proxy issue in karma test, [see here](https://github.com/OpenInfoGraphic/CCAT-Core/issues)
+- [ ] Browser proxy issue in karma test, [see here](https://github.com/OpenInfoGraphic/CCAT-Nodejs/issues)
 
 ## 1. Abstract
 
-CCAT-Core is designed as a light weighted core lib for crypto currency abitrage trading, whcih is developed in purely javascript, supporting both nodejs and browsers.
+CCAT-Nodejs is designed as a light weighted core lib for crypto currency abitrage trading, whcih is developed in purely javascript, supporting both nodejs and browsers.
 
-CCAT-Core has two main part, one is src/coin part for trading in crypto exchanges, the other is src/engine part to make the arbitrage strategy and risk control.
+CCAT-Nodejs has two main part, one is src/coin part for trading in crypto exchanges, the other is src/engine part to make the arbitrage strategy and risk control.
 
 ### 1.1 Currently Supported Cryptocurrency Exchange Markets
 
@@ -97,7 +97,7 @@ CCAT-Core has two main part, one is src/coin part for trading in crypto exchange
 ### 2.1 In Node.js through npm
 
 ```bash
-> npm install --save CCAT-Core
+> npm install --save CCAT-Nodejs
 ```
 
 ### 2.2 Browser: Browserify, Webpack, other bundlers
@@ -105,18 +105,18 @@ CCAT-Core has two main part, one is src/coin part for trading in crypto exchange
 The code published to npm that gets loaded on require is in fact an ES5 transpiled version with the right shims added. This means that you can require it and use with your favourite bundler without having to adjust asset management process.
 
 ```javascript
-const CCAT-Core = require('CCAT-Core')
+const CCAT-Nodejs = require('CCAT-Nodejs')
 ```
 
 
 ### 2.3 In the Browser through `<script>` tag
 
-Loading this module through a script tag will make the ```CCAT-Core``` obj available in the global namespace.
+Loading this module through a script tag will make the ```CCAT-Nodejs``` obj available in the global namespace.
 
 ```html
-<script src="https://unpkg.com/CCAT-Core/dist/index.min.js"></script>
+<script src="https://unpkg.com/CCAT-Nodejs/dist/index.min.js"></script>
 <!-- OR -->
-<script src="https://unpkg.com/CCAT-Core/dist/index.js"></script>
+<script src="https://unpkg.com/CCAT-Nodejs/dist/index.js"></script>
 ```
 
 ## 3. Usage
@@ -133,7 +133,7 @@ See the doc. (To be continue)
 
 ## 4. Contribute
 
-Contributions welcome. Please check out [the issues](https://github.com/OpenInfoGraphic/CCAT-Core/issues).
+Contributions welcome. Please check out [the issues](https://github.com/OpenInfoGraphic/CCAT-Nodejs/issues).
 
 ## 5. Acknowledgement
 

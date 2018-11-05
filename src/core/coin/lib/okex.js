@@ -9,7 +9,7 @@ class okex {
   constructor (config) {
     debug('constructor is called')
     this.config = config
-    this.okexAPI = new ccxt.okex({ // eslint-disable-line
+    this.api = new ccxt.okex({ // eslint-disable-line
       apiKey: config.key,
       secret: config.secret,
       timeout: 30000,
